@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+:root {
+  --laight-gray: hsl(0, 0%, 98%);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+
+  /* Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+}
+
+body {
+  background-color: var(--laight-gray);
+  font-family: 'Poppins', sans-serif;
+  color: var(--Very-Dark-Blue);
+}
+
+header {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header .header-normal {
+  font-size: 3rem;
+  font-weight: 200;
+  margin: 0.5rem 0;
+  color: rgb(83, 83, 83);
+}
+
+header .header-bold {
+  font-size: 3.2rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+  color: var(--Very-Dark-Blue);
+  /* letter-spacing: 0.7px; */
+}
+
+header > p {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  color: var(--Grayish-Blue);
+}
+
+/* ---- main section ----- */
+
+section.main {
+  max-width: 1440px;
+  width: 90%;
+  min-height: 70vh;
+  margin: auto;
+  padding-top: 5rem;
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+  align-items: center;
+}
+
+section .card {
+  background: #fff;
+  /* width: auto; */
+  min-height: 20rem;
+  margin: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  /* box-shadow: 0 4px 10px #00000020; */
+  box-shadow: 3px 5px 10px hsla(235, 28%, 75%, 0.199);
+  border-radius: 3px;
+}
+
+section .col {
+  width: 33%;
+}
+
+section > .card:nth-child(1) {
+  border-top: 4px solid var(--Cyan);
+}
+.inner-cards > .card:nth-child(1) {
+  border-top: 4px solid var(--Red);
+}
+.inner-cards > .card:nth-child(2) {
+  border-top: 4px solid var(--Orange);
+}
+.inner-cards + .card {
+  border-top: 4px solid var(--Blue);
+}
+
+.card h2 {
+  font-size: 2rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card > img {
+  align-self: flex-end;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1000px) {
+  section {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+  section .col {
+    width: 100%;
+  }
+  section .inner-cards {
+    width: 100%;
+  }
+  .inner-cards > .card {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 550px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 320px) {
+  header {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
